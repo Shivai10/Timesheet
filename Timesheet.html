@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Timesheet</title>
+    <link rel="stylesheet" href="Timesheet.css">
+    <script src="app.component.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="logo1.png" alt="Company Logo">
+        </div>
+    </header>
+    <section class="banner-section">
+        <div class="banner">
+            <div class="user-info">
+                <div class="user-banner">
+                        <img src="user.png" alt="User Icon">
+                        <span class="welcome-message">Welcome, admin</span>
+                </div>
+                <button class="logout-button"><a href="loginpage.html" class="logout-button">Logout</a></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timesheet Banner -->
+    <section class ="timesheet-section">
+        <div class="timesheet-box">
+            <!-- Blue Box for Date and Total Hours -->
+            <div class="date-total-box">
+                <div class="date-labels">
+                    <p>Select the date</p>
+                    <input type="date" id="date-input" required>
+                </div>
+                <div class="hours-label">
+                    <p>Total Hours</p>
+                    <div class="field-box">
+                        <p><span id="total-hours"></span></p>
+                    </div>
+                </div>
+            </div>         
+        </div>
+
+        <!-- Timesheet Table -->
+        <section class ="timesheet-tempelate">
+            <table class="timesheet-table">
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Date</th>
+                        <th>Project Name</th>
+                        <th>1st Level Activity</th>
+                        <th>2nd Level Activity</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                          <button class="confirm-button" onclick="confirmEntry(this)">✓</button>
+                          <script src="app.js"></script>
+                          <button class="deny-button" onclick="denyEntry(this)">✗</button>
+                        </td>
+                        <td><input type="date" placeholder="Select" required></td>
+                        <td>
+                          <select required>
+                            <option value="">Select</option>
+                            <!-- Add options dynamically from the backend -->
+                            <option value="Webapp">Project 1</option>
+                            <option value="Machine learning">Project 2</option>
+                            <!-- Add more options as needed -->
+                          </select>
+                        </td>
+                        <td>
+                          <select required>
+                            <option value="">Select</option>
+                            <!-- Add options dynamically from the backend -->
+                            <option value="activity1">Activity 1</option>
+                            <option value="activity2">Activity 2</option>
+                            <!-- Add more options as needed -->
+                          </select>
+                        </td>
+                        <td>
+                          <select required>
+                            <option value="">Select</option>
+                            <!-- Add options dynamically from the backend -->
+                            <option value="subactivity1">Subactivity 1</option>
+                            <option value="subactivity2">Subactivity 2</option>
+                            <!-- Add more options as needed -->
+                          </select>
+                        </td>
+                        <td>
+                          <select required>
+                            <option value="">Select</option>
+                            <option value="development">Development</option>
+                            <option value="deployment">Deployment</option>
+                            <option value="testing">Testing</option>
+                            <!-- Add more options as needed -->
+                          </select>
+                        </td>
+                        <td><textarea rows="4" cols="50" maxlength="250"></textarea></td>
+                        <td><input type="number" min="1" required></td>
+                      </tr> 
+                      <tr id="newEntry" style="display: none;">
+                        <td>
+                            <button class="confirm-button" onclick="confirmEntry(this)">✓</button>
+                            <button class="deny-button" onclick="denyEntry(this)">✗</button>
+                        </td>
+                        <td><span id="newDate"></span></td>
+                        <td><span id="newProjectName"></span></td>
+                        <td><span id="newActivity1"></span></td>
+                        <td><span id="newActivity2"></span></td>
+                        <td><span id="newCategory"></span></td>
+                        <td><span id="newDescription"></span></td>
+                        <td><span id="newHours"></span></td>
+                    </tr>              
+                </tbody>
+            </table>                                       
+        </section>  
+    </section>
+</body>
+</html>

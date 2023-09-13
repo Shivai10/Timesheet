@@ -1,0 +1,237 @@
+/* Reset default margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define a font-face rule for Calibri Light */
+@font-face {
+    font-family: 'Calibri';
+    src: url('calibri.woff') format('woff'); /* Replace 'calibrilight.woff' with the actual font file name */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    font-family: 'Calibri Light', Arial, sans-serif; /* Specify Calibri Light as the font, fallback to Arial if not available */
+    padding: 10px;
+    margin-top: 15px;
+}
+
+/* Banner section styles */
+.banner-section {
+    background-color: #2d2c36; /* Set your desired background color */
+    padding: 20px;
+    text-align: center;
+}
+
+.banner {
+    max-width: 100%;
+    margin: 0 auto;
+    /* Add additional styling for your banner content */
+}
+
+
+.logo img {
+    max-width: 250px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.user-banner{
+    background-color: #2d2c36;
+    color: white;
+    display: flex;
+    align-items: right;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.user-banner img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.welcome-message {
+    margin-right: 10px;
+    font-family: 'Calibri', Arial, sans-serif; /* Specify Calibri Light as the font, fallback to Arial if not available */
+}
+
+.logout-button {
+    background-color: #2d2c36;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'Calibri Light', Arial, sans-serif; /* Specify Calibri Light as the font, fallback to Arial if not available */
+    cursor: pointer;
+}
+
+/* Hover effect for the Logout button */
+.logout-button:hover {
+    background-color: #920000; /* Darken the background color on hover */
+}
+
+/* Timesheet section styles */
+.timesheet-section {
+    background-color:rgb(237,239,239);
+    padding: 30px;
+    font-family: 'Calibri', Arial, sans-serif; /* Specify Calibri Light as the font, fallback to Arial if not available */
+    align-items: left;
+}
+
+/* Blue box styles */
+.date-total-box {
+    background-color:rgba(240,248,255,255); /* Set your desired background color */
+    font-family: 'Calibri', Arial, sans-serif; /* Specify Calibri Light as the font, fallback to Arial if not available */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: right;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    font-size: 15px;
+}
+
+.date-labels, 
+.hours-labels{
+    flex: 1;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+
+.date-total-box input[type="date"] {
+    width: 30%; /* Adjust the width as needed */
+    height: 30%;
+}
+
+.field-box {
+    width: 100%;
+    height: 25%;
+    border: 1px solid #ccc; /* Add a border to create a box-like appearance */
+    border-radius: 1px; /* Add rounded corners if desired */
+    background-color: #ffffff; /* Add background color for the box */
+  }
+
+
+/* Timesheeettttttt stufffff */
+
+.timesheet-tempelate{
+    background-color:rgb(255, 255, 255);
+    padding: 30px;
+    font-family: 'Calibri', Arial, sans-serif; /* Specify Calibri Light as the font, fallback to Arial if not available */
+    align-items: left;
+    
+}
+
+.timesheet-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.add-button {
+    align-self: start;
+    background-color: green;
+    color: rgb(203, 10, 10);
+    border: none;
+    padding: 2px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.total-hours {
+    display: flex;
+    align-items: center;
+}
+
+.total-hours label {
+    margin-right: 10px;
+}
+
+/* Timesheet table styles */
+.timesheet-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.timesheet-table thead tr:first-child {
+    background-color: rgba(240,248,255,255); /* Blue background color for the first row */
+  }
+  
+  /* Set the background color for all other rows to white */
+.timesheet-table thead tr:not(:first-child) {
+    background-color: #ffffff; /* White background color for all other rows */
+  }
+
+.timesheet-table th, .timesheet-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.timesheet-table input[type="date"], .timesheet-table select, 
+input[type="number"]{
+  width: 100%;
+  padding: 5px;
+  margin: 4px 0;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #ffffff; /* Light gray background */
+  color: #333; /* Text color */
+  outline: none;
+}
+
+/* Style the date input on focus (add a subtle border glow) */
+.timesheet-table [type="date"]:focus {
+  border-color: #007bff; /* Blue border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue box shadow on focus */
+}
+
+
+/* Style the confirm button */
+.confirm-button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 12px;
+    background-color: #5cb85c; /* Green color for confirmation */
+    color: white;
+    border-radius: 4px; /* Add rounded corners */
+  }
+  
+  /* Style the deny button */
+  .deny-button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 12px;
+    background-color: #d9534f; /* Red color for denial */
+    color: white;
+    border-radius: 4px; /* Add rounded corners */
+  }
+  
+
+
+/* Add more CSS for table rows and styling as needed */
